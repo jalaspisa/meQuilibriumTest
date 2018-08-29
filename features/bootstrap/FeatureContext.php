@@ -77,7 +77,7 @@ class FeatureContext implements Context
       
 
         $this->webDriver->findElement(WebDriverBy::linkText($text))->click();
-        if($this->webDriver->getCurrentURL()!= $this->PrivacyUrl) throw new Exception ("Link is ". $this->webDriver->getCurrentURL(). "not ".$this->PrivacyUrl);
+        if($this->webDriver->getCurrentURL()!= $this->PrivacyUrl) throw new Exception ("Link is went to: ". $this->webDriver->getCurrentURL(). ", not the desired location: ".$this->PrivacyUrl);
     }
 
     /**
@@ -95,7 +95,7 @@ class FeatureContext implements Context
     {
         $pageSource = $this->webDriver->getPageSource();
         $contentFound = strpos($pageSource, $date);
-        if($contentFound === false) throw new Exception ("The date has been changes or there is no date present");
+        if($contentFound === false) throw new Exception ("The date has been changed or there is no date present");
     }
 
     /**
