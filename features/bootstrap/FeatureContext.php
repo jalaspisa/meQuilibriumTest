@@ -32,7 +32,7 @@ class FeatureContext implements Context
     Protected $webDriver;
 
     Protected $BaseUrl;
-    Protected $TermsAndConditionsUrl;
+    Protected $PrivacyUrl;
     Protected $ElementClick;
     Protected $DateElement;
     
@@ -40,8 +40,8 @@ class FeatureContext implements Context
     public function __construct()
     {
         $this->BaseUrl = "https://www.mequilibrium.com/";
-        $this->TermsAndConditionsUrl = $this->BaseUrl."terms-and-conditions/";
-     
+        $this->PrivacyUrl = $this->BaseUrl."privacy/";
+        
     }
 
         /**
@@ -70,22 +70,22 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Then I can click the :arg1 link and go to the Terms and Conditions Page
+     * @Then I can click the :arg1 link and go to the Privacy Page
      */
-    public function iCanClickTheLinkAndGoToTheTermsAndConditionsPage($text)
+    public function iCanClickTheLinkAndGoToThePrivacyPage($text)
     {
       
 
         $this->webDriver->findElement(WebDriverBy::linkText($text))->click();
-        if($this->webDriver->getCurrentURL()!= $this->TermsAndConditionsUrl) throw new Exception ("Link is ". $this->webDriver->getCurrentURL(). "not ".$this->TermsAndConditionsUrl);
+        if($this->webDriver->getCurrentURL()!= $this->PrivacyUrl) throw new Exception ("Link is ". $this->webDriver->getCurrentURL(). "not ".$this->PrivacyUrl);
     }
 
     /**
-     * @When I go to the Terms and Conditions Page
+     * @When I go to the Privacy Page
      */
-    public function iGoToTheTermsAndConditionsPage()
+    public function iGoToThePrivacyPage()
     {
-        $this->webDriver->get($this->TermsAndConditionsUrl);
+        $this->webDriver->get($this->PrivacyUrl);
     }
 
     /**
@@ -95,7 +95,7 @@ class FeatureContext implements Context
     {
         $pageSource = $this->webDriver->getPageSource();
         $contentFound = strpos($pageSource, $date);
-        if($contentFound === false) throw new Exception ("The date has been changed or there is no date present");
+        if($contentFound === false) throw new Exception ("The date has been changes or there is no date present");
     }
 
     /**

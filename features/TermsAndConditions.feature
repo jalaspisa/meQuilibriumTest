@@ -6,14 +6,14 @@ Feature: TermsAndConditions
 	Scenario: TermsAndConditionsLinkIsPresent
 		Given I have a web browser
 		When I go to the HomePage
-		Then I should see a 'TERMS & CONDITIONS' link
+		Then I should see a 'PRIVACY [UPDATED]' link
 
 	Scenario: TermsAndConditionsLinkWorks
 		Given I have a web browser
 		When I go to the HomePage
-		Then I can click the "TERMS & CONDITIONS" link and go to the Terms and Conditions Page
+		Then I can click the "PRIVACY [UPDATED]" link and go to the Privacy Page
 
 	Scenario: CorrectTermsAndConditionsDate
 		Given I have a web browser
-		When I go to the Terms and Conditions Page
-		Then the date should be "April 27, 2018"
+		When I go to the Privacy Page
+		Then the date should be "May 24, 2018"
