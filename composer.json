@@ -1,0 +1,18 @@
+{
+    "name": "jalas/me-quilibrium-test",
+    "authors": [
+        {
+            "name": "Joseph LaSpisa",
+            "email": "jalaspisa3rd@yahoo.com"
+        }
+    ],
+    "require": {
+
+    	"behat/behat": "~3.5.0",
+    	"facebook/webdriver": "~1.0"
+
+    },
+    "config": {
+    	"bin-dir": "bin/"
+    }
+}
