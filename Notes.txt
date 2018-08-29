@@ -1,0 +1,16 @@
+By Joseph LaSpisa
+
+Tools Used:
+Windows 10
+Selenium 2.53.1
+Facebook Webdriver 1.0
+Behat: 3.5.0
+Sublime 2
+ChromeDriver 2.41
+
+and the most up to date versions of PHP and Java.
+
+Most of tools used were tools I had never used before, but figuring them out was
+Quite the adventure. The overall concepts and methods were fine. Most hangups were
+due to incorrect PHP config settings or learning the new classes of the Facebook Webdriver
+
